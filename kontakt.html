@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="projekt do kursu">
+    <meta name="author" content="Bartosz Żołynia">
+    <title>Zajęcia Samoobrony</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- WŁASNE STYLE CSS -->
+    <link rel="stylesheet" href="style/custom.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="sticky-top przyklejony-top">
+        <nav class="navbar navbar-light navbar-expand-lg justify-content-center">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img src="images/logo_firmy.png" alt="logo" class="img-fluid"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <div class="navbar-nav nawigacja-text">
+                        <a href="index.html" class="nav-item nav-link">Strona Główna</a>
+                        <a href="jujitsu.html" class="nav-item nav-link">Ju-Jitsu</a>
+                        <a href="treningi.html" class="nav-item nav-link">Treningi</a>
+                        <a href="zapisy.html" class="nav-item nav-link">Zapisy</a>
+                        <a href="multimedia.html" class="nav-item nav-link">Multimedia</a>
+                        <a href="#" class="nav-item nav-link active text-danger">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- TOP -->
+    <div class="jumbotron jumbotron-fluid text-center contact_jumbo">
+        <div class="container">
+            <h1 class="text-uppercase top-header">DOŁĄCZ DO NAS</h1>
+
+        </div>
+    </div>
+
+    <!-- form -->
+    <section class="write-to-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="text-center text-uppercase third-text">KONTAKT</h2>
+                    <ul class="list-unstyled contact_pagetext pt-3">
+                        <li>
+                            <i class="fas fa-phone contact_page"></i> 531-253-353
+                        </li>
+                        <li>
+                            <i class="fas fa-phone contact_page"></i> 606-226-312
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope contact_page"></i> zolyniabartosz@gmail.com
+                        </li>
+                    </ul>
+
+                    <h2 class="text-center text-uppercase third-text">TUTAJ TRENUJEMY</h2>
+                    <p class="p_map text-center">Rzeszów, ul. Poznańska 2</p>
+                    <div id="map" style="width:320px; height:250px; border-radius: 10px 10px" class="mx-auto d-block">Mapa</div>
+
+                    <script>
+                        function myMap() {
+                            var mapCanvas = document.getElementById("map");
+                            var mapOptions = {
+                                center: new google.maps.LatLng(50.019369, 21.981129),
+                                zoom: 18,
+                                mapTypeId: 'hybrid'
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+
+                            var myCenter = new google.maps.LatLng(50.019369, 21.981129);
+                            var marker = new google.maps.Marker({
+                                position: myCenter,
+                                animation: google.maps.Animation.BOUNCE,
+                                icon: 'flag_32.png'
+                            });
+                            marker.setMap(map);
+                        }
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="formularz-lewa_strona">
+                        <h3 class="text-uppercase contact_header text-center">Masz pytanie?<br> -napisz do Nas korzystając z formularza:</h3>
+                        <form action="">
+                            <label for="name" class="form-control-label">Imię i Nazwisko</label>
+                            <input type="text" id="name" class="form-control">
+                            <label for="e-mail" class="form-control-label">Twój adres e-mail</label>
+                            <input type="email" id="email" class="form-control">
+                            <label for="msg-title" class="form-control-label">Temat wiadomości</label>
+                            <input type="text" id="msg-title" class="form-control">
+                            <label for="message" class="form-control-label">Treść wiadomości</label>
+                            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                            <button class="btn btn-warning my-2 form-button" style="cursor: pointer">Wyślij</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- sekcja obrazki -->
+
+    <div class="container">
+
+
+        <div class="row py-4 text-center text-lg-left">
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+
+                <img class="img-fluid img-thumbnail my-1" src="images/contact_box5.png" alt="samuraj1">
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+
+                <img class="img-fluid img-thumbnail  my-1" src="images/contact_box2.jpg" alt="samuraj2">
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+
+                <img class="img-fluid img-thumbnail  my-1" src="images/contact_box3.jpg" alt="samuraj3">
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+
+                <img class="img-fluid img-thumbnail  my-1" src="images/contact_box4.jpg" alt="samuraj4">
+            </div>
+        </div>
+    </div>
+
+    <!-- stopka -->
+    <section class="text-center copyright">
+        <div class="container">
+            &copy; Copyrights 2018 B.Żołynia-samoobrona WSZELKIE PRAWA ZASTRZEŻONE
+            <span class="mt-2 d-block copy_project" style="font-weight: bold">Designed by Bartosz Żołynia</span>
+            <div class="flat_icons">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </div>
+    </section>
+
+
+
+    <script src="bootstrap/jquery-3.2.1.slim.min.js "></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js "></script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
